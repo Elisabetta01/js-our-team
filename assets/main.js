@@ -50,5 +50,28 @@ const team = [
      },
    ];
 
-   //stampo su console le info
-   console.log(team)
+     //stampo su console le info
+     console.log(team)
+
+//do valore agli oggetti
+for(let i = 0; i < team.length; i++){
+     console.log(team[i])
+
+     let singoloOggetto = team[i]
+
+     let imgSingola = './assets/img/'
+
+     //creo le card
+     document.querySelector('.col').innerHTML += `
+          <div class="card" style="width: 18rem;">
+               <img src="${imgSingola}${singoloOggetto.image}" class="card-img-top" alt="...">
+               <div class="card-body" id='${i}'>
+                    <h5 class="card-title"> ${ singoloOggetto.name } </h5>
+                    <p class="card-text"> ${ singoloOggetto.role} </p>
+               </div>
+          </div>
+          `
+
+}
+
+
